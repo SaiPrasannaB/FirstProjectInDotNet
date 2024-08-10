@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CD0B03F-EED7-479C-A20C-6189B8B79A16}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FirstProject</RootNamespace>
+    <AssemblyName>FirstProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GenaratingDLL">
+      <HintPath>..\..\GenaratingDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assignment.html" />
+    <Content Include="Background-Attributes.html" />
+    <Content Include="Border-Attributes.html" />
+    <Content Include="CSS-COLORS.html" />
+    <Content Include="Display-Attributes.html" />
+    <Content Include="DivTag.html" />
+    <Content Include="ExternalCSS.css" />
+    <Content Include="Font-Attributes.html" />
+    <Content Include="HTML-CSS-Selectors.html" />
+    <Content Include="HtmlBasics.html" />
+    <Content Include="Images Folder\BackgroundImage.JPG" />
+    <Content Include="Images Folder\bgimage.jfif" />
+    <Content Include="Images Folder\bkg-blu.jpg" />
+    <Content Include="Images Folder\file.png" />
+    <Content Include="Images Folder\god.JPG" />
+    <Content Include="Images Folder\img.jpg" />
+    <Content Include="Images Folder\img2.JPG" />
+    <Content Include="Images Folder\Mixed-Color.JPG" />
+    <Content Include="Images Folder\My pic.jpeg" />
+    <Content Include="Images Folder\web.JPG" />
+    <Content Include="InputTags-Controls.html" />
+    <Content Include="JavaScript-Practice.html" />
+    <Content Include="JavaScriptBasics.html" />
+    <Content Include="Link-Attributes.html" />
+    <Content Include="SemanticTags.html" />
+    <Content Include="TableTag.html" />
+    <Content Include="Text-Attributes.html" />
+    <Content Include="Transform-practice.html" />
+    <Content Include="Transform-Transition.html" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

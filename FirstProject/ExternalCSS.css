@@ -1,0 +1,46 @@
+﻿h1
+{
+    color:red;
+    text-align:center;
+}
+#idSelector{
+    color:aqua;
+}
+.classSelector{
+    color:blue;
+}
+input[type="text"]
+{
+    background-color:bisque;
+}
+input[type="button"]{
+    background-color: green;
+}
+/*Pseudo Selector*/
+input[type="number"]:focus{
+    background-color: green;
+}
+input[type="button"]:hover {
+    background-color: blue;
+}
+ol li:first-child{
+    background-color:brown;
+}
+ol li:last-child {
+    background-color:burlywood;
+}
+#MixedSelector li:nth-child(even) {
+    background-color: blueviolet
+}
+#MixedSelector li:nth-child(odd) {
+    background-color: blue
+}
+#MixedSelector1 li:nth-child(1) {
+    background-color: chartreuse
+}
+#MixedSelector1 li:nth-child(2) {
+    background-color: crimson
+}
+#MixedSelector1 li:nth-child(4) {
+    background-color: crimson
+}

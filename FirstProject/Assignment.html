@@ -1,0 +1,140 @@
+﻿<html>
+<head>
+    <title>Website</title>
+    <style>
+        body {
+            background-image: url('Images Folder/bgimage.Jfif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+            background: linear-gradient(45deg,darkblue,black);
+            color: white;
+        }
+        #menuSection a {
+            text-decoration: none;
+            color: white;
+            padding:30px;
+            margin:45px;
+        }
+        #menuSection a:hover{
+            background-color:cornflowerblue;
+            width:5px;
+            height:5px;
+        }
+        #menuSection input[type="button"] {
+            background-color: darkorange;
+            border-radius:10px;
+            border:1px solid darkorange;
+        }
+        div {
+            display: inline-block;
+            margin: 30px;
+            top: 50px;
+        }
+        .inputAttributes{
+            display:block;
+            font-size:large;
+        }
+        #WebsiteInfo {
+            background-color:rgba(0 0 0 0.5);
+            border-radius:20px;
+        }
+        #WebsiteInfo h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:70px;
+            color:white;
+            padding:10px;
+        }
+        #WebsiteInfo p{
+            text-indent:100px;
+            font-size:large;
+            color:white;
+        }
+        #WebsiteInfo input[type="button"]{
+            position:relative;
+            left:350px;
+            height:50px;
+            width:120px;
+            background-color:darkorange;
+            color:white;
+            border-radius:10px;
+            font-size:large;
+            border:1px solid darkorange;
+        }
+        #loginInfo{
+            background-color:rgba(0,0,0,0.5);
+        }
+        #loginInfo input[type=button]{
+            position:relative;
+            left:85px;
+            top:20px;
+            height:50px;
+            width:150px;
+            border-radius: 10px;
+            border:1px solid darkorange;
+        }
+        #loginInfo input[type=text]{
+            position:relative;
+            left:45px;
+        }
+        #loginInfo input[type=password] {
+            position: relative;
+            left: 45px;
+        }
+        #loginInfo p{
+            text-align:center; 
+            color:white;
+            font-size:large;
+        }
+        footer{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <marquee>Sample Website by using HTML & CSS</marquee>
+    </header>
+    <br />
+    <br />
+    <br />
+    <section id="menuSection">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Design</a>
+            <a href="#">Contact</a>
+            <a href="#">Feedback</a>
+            <input type="text" placeholder="Type here to search" />
+            <input type="button" value="Search" />
+        </nav>
+    </section>
+
+    <section id="web&LoginInfoSection">
+        <div id="WebsiteInfo" style="height:500px;width:70%">
+            <h1>Web Design & <span style="color:darkorange">Development</span> Course</h1>
+            <p>Web design is a specialisation of the design stream. They also use HTML,CSS,Markup Validatores etc.,</p>
+            <p>to create design elements.</p>
+            <input type="button" value="JOIN US" />
+        </div>
+
+        <div id="loginInfo" style="height:320px;width:300px">
+            <input type="button" value="Login Here" class="inputAttributes" style="background-color: white; color: darkorange"/><br /><br />
+            <input type="text" placeholder="Enter Email Here" class="inputAttributes" /><br />
+            <input type="password" placeholder="Enter Password Here" class="inputAttributes" />
+            <input type="button" value="Login" class="inputAttributes" style="position:relative;left:85px;background-color:darkorange;color:white" /><br />
+            <p>Dont have an account?</p>
+            <p><span style="color:darkorange">Sign-Up</span> here</p>
+        </div>
+    </section>
+    <footer>
+        <h4>Footer Tag &copy;</h4>
+    </footer>
+</body>
+</html>

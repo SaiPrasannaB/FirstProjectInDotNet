@@ -1,0 +1,1339 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+
+    <!--document.write() & document.writeln()-->
+    <script language="javascript">
+        document.write("Java Script");
+        document.write("<br>");
+        document.writeln("Java Script");
+        document.writeln("Java Script");
+        document.write("<br>");
+        document.write("Java Script");
+        document.write("Java Script");
+    </script>
+
+    <!--Table-->
+    <script>
+        document.write("<table border='1' style='margin:auto;background-color:red'>");
+
+        document.write("<tr>");
+        document.write("<th>User Name</th>");
+        document.write("<th><input type='text'/></th>");
+        document.write("</tr>");
+
+        document.write("<tr>");
+        document.write("<th>Password</th>");
+        document.write("<th><input type='password'/></th>");
+        document.write("</tr>");
+
+        document.write("<tr>");
+        document.write("<th><input type='submit' value='Login'/></th>");
+        document.write("</tr>");
+
+        document.write("</table>");
+    </script>
+
+    <!--Console Object Functions-->
+    <script>
+        console.log("ConsoleLog");
+        console.info("ConsoleInfo");
+        console.warn("ConsoleWarn");
+        console.error("ConsoleError");
+
+        var consoleTable = ["sai", "prasanna"];
+        console.table(consoleTable);
+        console.table(consoleTable);
+
+        var consoleTable1 = {
+            EmpID: 10871,
+            EName: "sai",
+            Salary: 100000
+        };
+        console.table(consoleTable1);
+    </script>
+
+    <!--Var-->
+    <script>
+
+        var a;
+        console.log(a); //Undefined
+        a = 100;
+        console.log(a);
+        a = "name";
+        console.log(a);
+        a = 'a';
+        console.log(a);
+        a = 100.2;
+        console.log(a);
+        a = true;
+        console.log(a);
+
+    </script>
+
+    <!--let-->
+    <script>
+
+        let l;
+        console.log(l); //Undefined
+        l = 10;
+        console.log(l);
+        l = 10.5;
+        console.log(l);
+        l = "name";
+        console.log(l);
+        l = 'n';
+        console.log(l);
+        l = true;
+        console.log(l);
+
+    </script>
+
+    <!--Var & Let Difference-->
+    <script>
+
+        /*Difference 1: In var type redeclaration of variable is possible, in let not possible.*/
+        var vardiff1 = 100;
+        console.log(vardiff1);
+        var vardiff1 = 200;
+        console.log(vardiff1);
+
+        let letdiff1 = 100;
+        console.log(letdiff1);
+        //let letdiff1 = 200;
+        //console.log(letdiff1);
+
+        /*Differnce 2:Var can acess before intilaization but in let it is not possible */
+        console.log(vardiff2);//Undefined
+        var vardiff2 = 100;
+        console.log(vardiff2);
+
+        /*console.log(letdiff2);*///Error
+        let letdiff2 = 100;
+        console.log(letdiff2);
+
+        /*Differnce 3: SCOPE: Functional Scope and Block Scope
+        Var we can acess inside & oustide of the function block
+        let we cannot access outside of the functional block is not possible.
+        Var: Functional Scope, Let: Block Scope
+        */
+        function VarFunction() {
+            if (true) {
+                var varFun1 = 100;
+                console.log(varFun1);
+            }
+            console.log(varFun1);
+        }
+        VarFunction();
+
+        function letFunction() {
+            if (true) {
+                let letFun1 = 100;
+                console.log(letFun1);
+            }
+            /* console.log(letFun1);*/
+        }
+        letFunction();
+
+        /*Difference 4: Global Object*/
+        console.log("Global Object");
+        var globalObject = 100;
+        function globalfunction() {
+            var globalObject = 200;
+            console.log(globalObject);
+            console.log(window.globalObject);
+            console.log(this.globalObject);
+        }
+        globalfunction();
+
+        let letGlobalObject = 10;
+        function letGlobalFunction() {
+            let letGlobalObject = 20;
+            console.log(letGlobalObject);
+            console.log(Window.letGlobalObject);
+            console.log(this.letGlobalObject);
+        }
+        letGlobalFunction();
+
+        var varVariable = 123;
+        console.log(varVariable);
+        console.log(window.varVariable);
+
+        let letVariable = 456;
+        console.log(letVariable);
+        console.log(window.letVariable);
+    </script>
+
+    <!--Const-->
+    <script>
+        const constVariable = 10;
+        console.log(constVariable);
+
+        /*constVariable = 20;*/
+        /* console.log(constVariable1);*/
+
+        function constFunction() {
+            const constVariable1 = 20;
+            console.log(constVariable1);
+            console.log(window.constVariable);
+            console.log(this.constVariable);
+        }
+        /* console.log(constVariable1);*/
+        constFunction();
+
+    </script>
+
+    <!--Primitive DataTypes-->
+    <script>
+        console.log("Primitive DataTypes");
+
+        let numberprimtive = 100;
+        console.log(numberprimtive);
+        console.log(typeof numberprimtive);
+
+        let numberprimtive1 = 100.45;
+        console.log(numberprimtive1);
+        console.log(typeof numberprimtive1);
+
+        let stringprimtive = "sai";
+        console.log(stringprimtive);
+        console.log(typeof stringprimtive);
+
+        let stringprimtive1 = 'sai';
+        console.log(stringprimtive1);
+        console.log(typeof stringprimtive1);
+        stringprimtive1 = 'sai';
+        console.log(stringprimtive1);
+        console.log(stringprimtive == stringprimtive1);
+
+        let boolPrimitive = true;
+        console.log(boolPrimitive);
+        console.log(typeof boolPrimitive);
+
+        let boolPrimitive1 = false;
+        console.log(boolPrimitive1);
+        console.log(typeof boolPrimitive1);
+
+        let bigIntPrimitive = BigInt(1111111111111111111111111111n);
+        console.log(bigIntPrimitive);
+        console.log(typeof bigIntPrimitive);
+
+        let bigIntPrimitive1 = BigInt(1111111111111111111111111111);
+        console.log(bigIntPrimitive1);
+        console.log(typeof bigIntPrimitive1);
+    </script>
+
+    <!--Symbol Primitive DataTypes-->
+    <script>
+        let symbolPrimitive = Symbol();
+        console.log(symbolPrimitive);
+        let symbolPrimitive1 = Symbol("sai");
+        console.log(symbolPrimitive1);
+        let symbolPrimitive12 = Symbol("sai");
+        console.log(symbolPrimitive12);
+        console.log(symbolPrimitive1 == symbolPrimitive12);
+
+        let email = Symbol();
+
+        let symbolPrimiviteObject = {};
+        symbolPrimiviteObject.name = "sai";
+        symbolPrimiviteObject.id = 10871;
+        symbolPrimiviteObject.address = "Vijayawada";
+        symbolPrimiviteObject[email] = "abc@gmail.com";
+        console.log(Object.keys(symbolPrimiviteObject));
+        console.log(symbolPrimiviteObject);
+        console.log(symbolPrimiviteObject[email]);
+    </script>
+
+    <!--UNDEFINED, NULL PRIMITIVE DATA TYPES-->
+    <script>
+        let undefinedPrimitive;
+        console.log(undefinedPrimitive);
+        console.log(typeof undefinedPrimitive);
+
+        let undefinedPrimitive1 = undefined;
+        console.log(undefinedPrimitive1);
+        console.log(typeof undefinedPrimitive1);
+
+        let nullPrimitive = null;
+        console.log(nullPrimitive);
+        console.log(typeof nullPrimitive);
+
+        console.log(undefinedPrimitive == nullPrimitive);
+        console.log(undefinedPrimitive === nullPrimitive);
+    </script>
+
+    <!--Type Casting-->
+    <!--IMPLICIT-->
+    <script>
+        let implicit = "200";
+        let implicit1 = 100;
+        console.log(implicit - implicit1);
+        console.log(implicit * implicit1);
+        console.log(implicit / implicit1);
+        console.log(implicit % implicit1);
+        console.log(implicit + implicit1);
+    </script>
+    <!--EXPLICIT-->
+    <script>
+        let explicit = "100";
+        let explicit1 = "200";
+        console.log(explicit + explicit1);
+
+        let explicit2 = Number(explicit);
+        let explicit3 = Number(explicit1);
+        console.log(explicit2 + explicit3);
+
+        let explicit4 = parseInt(explicit);
+        let explicit5 = parseInt(explicit1);
+        console.log(explicit4 + explicit5);
+
+        let explicit6 = "100.45";
+        let explicit7 = "200.43";
+        console.log(explicit6 + explicit7);
+
+        let explicit8 = parseFloat(explicit6);
+        let explicit9 = parseFloat(explicit7);
+        console.log(explicit8 + explicit9);
+
+        let nullValue = null;
+        let nullValue1 = Number(nullValue);
+        console.log(nullValue1);
+        console.log(typeof nullValue1);
+
+        let value1;
+        let value2 = Number(value1);
+        console.log(value2); //Not a Number(NAN);
+
+        let boolValue = true;
+        let boolValue1 = Number(boolValue);
+        console.log(boolValue1);
+    </script>
+
+    <!--StringFunction-->
+    <script>
+        let string1 = 100;
+        let string2 = 200;
+        console.log(string1 + string2);
+        let string3 = String(string1);
+        let string4 = String(string2);
+        console.log(string3 + string4);
+
+        let stringdotfunction = 100;
+        console.log(stringdotfunction.toString());
+        console.log(typeof stringdotfunction.toString());
+    </script>
+
+    <!--BooleanFunction-->
+    <script>
+        let boolFunction = 1;
+        console.log(Boolean(boolFunction));
+        let boolFunction1 = "sai";
+        console.log(Boolean(boolFunction1));
+        let boolFunction2 = null;
+        console.log(Boolean(boolFunction2));
+        let boolFunction3;
+        console.log(Boolean(boolFunction3));
+    </script>
+
+    <!--Operators-->
+    <!--Arthametic Operators-->
+    <script>
+        let Arthametic1 = 5;
+        let Arthametic2 = 6;
+        console.log(Arthametic1 + Arthametic2);
+        console.log(Arthametic1 * Arthametic2);
+        console.log(Arthametic1 - Arthametic2);
+        console.log(Arthametic1 / Arthametic2);
+        console.log(Arthametic1 % Arthametic2);
+        console.log(Arthametic1 ** Arthametic2);
+        console.log(2 ** 2);
+    </script>
+    <!--Assignement Operators-->
+    <script>
+        let Assignment1 = 5;
+        let Assignment2 = 6;
+        Assignment1 += Assignment2;
+        console.log(Assignment1);
+        Assignment1 *= Assignment2;
+        console.log(Assignment1);
+        Assignment1 -= Assignment2;
+        console.log(Assignment1);
+        Assignment1 /= Assignment2;
+        console.log(Assignment1);
+        Assignment1 %= Assignment2;
+        console.log(Assignment1);
+        Assignment1 **= Assignment2;
+        console.log(Assignment1);
+    </script>
+    <!--Bitwise Operators-->
+    <script>
+        let Bitwise1 = 10;
+        let Bitwise2 = 15;
+        console.log(Bitwise1 | Bitwise2);
+        console.log(Bitwise1 & Bitwise2);
+        console.log(Bitwise1 ^ Bitwise2);
+    </script>
+    <!--Shift Operators-->
+    <script>
+        console.log(100 << 2);
+        console.log(100 >> 2);
+    </script>
+    <!--Relational/Comparison Operators-->
+    <script>
+        let Relational1 = 10;
+        let Relational2 = 10;
+        let Relational3 = "15";
+        let Relational4;
+        let Relational5 = null;
+        console.log(Relational1 < Relational2);
+        console.log(Relational1 <= Relational2);
+        console.log(Relational1 > Relational2);
+        console.log(Relational1 >= Relational2);
+        console.log(Relational1 != Relational2);
+        console.log(Relational1 == Relational2);
+        console.log(Relational2 === Relational3);
+        console.log(Relational4 == Relational5);
+        console.log(Relational4 === Relational5);
+    </script>
+    <!--Logical Operators-->
+    <script>
+        let logical1 = 10;
+        let logical2 = 20;
+        let logical3 = 30;
+        let logical4 = true;
+        let logical5 = 1;
+        console.log(logical1 < logical2 && logical2 < logical3);
+        console.log(logical1 > logical2 && logical2 > logical3);
+        console.log(logical1 == logical2 && logical2 == logical3);
+        console.log(logical1 === logical2 && logical2 == logical3);
+        console.log(logical1 < logical2 || logical2 < logical3);
+        console.log(logical1 > logical2 || logical2 > logical3);
+        console.log(logical1 == logical2 || logical2 == logical3);
+        console.log(logical1 === logical2 || logical2 == logical3);
+        console.log(!logical4);
+        console.log(!logical5);
+    </script>
+    <!--Increment & Decrement Operators-->
+    <script>
+        let incdec1 = 5;
+        console.log(incdec1);
+        console.log(incdec1++);
+        console.log(incdec1);
+        console.log(++incdec1);
+        console.log(incdec1--);
+        console.log(--incdec1);
+    </script>
+    <!--String Operators-->
+    <script>
+        console.log("hello" + "world");
+        console.log(4 + "hello");
+        console.log(5 + 4 + "hello");
+        console.log("hello" + 5 + 4);
+    </script>
+    <!--Ternory Operators-->
+    <script>
+        /* example1*/
+        //let ternory1 = prompt("Enter a Number");//return type string
+        //let ternory2 = parseInt(ternory1);
+        //let ternoryResult = (ternory2 % 2 == 0) ? "Even" : "Odd";
+        //alert(ternoryResult);
+
+        /* example2/
+        //let ternory3 = parseInt(prompt("Enter 1/2/3/4 Numbers"));
+        //let ternory4 = parseInt(prompt("Enter First Numbers"));
+        //let ternory5 = parseInt(prompt("Enter Second Numbers"));
+        //let ternoryResult1 = (ternory3 == 1) ? ternory4 + ternory5 : (ternory3 == 2) ? ternory4 * ternory5:"Nooutput";
+        //alert(ternoryResult1);
+
+        /* example3*/
+        //let ternoryConfirm = confirm("hello");
+        //if (ternoryConfirm == true) {
+        //    alert("ok")
+        //}
+        //else {
+        //    alert("cancel")
+        //}
+    </script>
+    <!--TypeOf Operators-->
+    <script>
+        let typeof1 = 10;
+        /* alert(typeof typeof1);*/
+        let typeof2 = 0 / 100;
+        /*alert(typeof typeof2);*/
+    </script>
+
+    <!--Conditios-->
+    <script>
+        let ifA = 10;
+        if (ifA > 0) {
+            console.log("positive");
+        } else if (ifA < 0) {
+            console.log("Negative");
+        }
+        else if (ifA == 0) {
+            console.log("Zero");
+        }
+        else {
+            console.log("Non Numbers");
+        }
+    </script>
+    <!--Loops-->
+    <script>
+        var for1 = 0;
+        for (for1 = 1; for1 <= 5; for1++) {
+            console.log(for1);
+        }
+        console.log(for1);
+
+        /*display even numbers in between 1 to 10*/
+        for (let even = 1; even <= 10; even++) {
+            if (even % 2 == 0) {
+                console.log(even);
+            }
+        }
+
+        /*while loop*/
+        console.log("While loop");
+        let while1 = 1;
+        while (while1 <= 5) {
+            console.log(while1);
+            while1++;
+        }
+        /*sum of the digits*/
+        let sum1 = 1234;
+        let sum2 = 0;
+        let remainder;
+        while (sum1 != 0) {
+            remainder = sum1 % 10;
+            sum2 = sum2 + remainder;
+            sum1 = parseInt(sum1 / 10);
+        }
+        console.log(sum2);
+
+        /* dowhile*/
+        let dowhile = 1;
+        do {
+            console.log(dowhile);
+            dowhile++
+        } while (dowhile <= 10);
+    </script>
+
+    <!--Object-->
+    <!--Object Literal-->
+    <script>
+        let EmployeeObject = {
+            EmpNo: 10871,
+            EmpName: "Sai",
+        }
+        console.log(EmployeeObject["EmpNo", "EmpName"])
+        console.log(EmployeeObject);
+    </script>
+    <!--Using new Keyword-->
+    <script>
+        let StudentObject = new Object();
+        StudentObject.roolno = 1;
+        StudentObject.name = "sai";
+        console.log(StudentObject);
+    </script>
+    <!--Using Constructor-->
+    <script>
+        function Building(No, floor, buildingName) {
+            this.No = No;
+            this.floor = floor;
+            this.buildingName = buildingName;
+        }
+        let building1 = new Building(1, 101, "AAAAAAA");
+        let building2 = new Building(1, 101, "ssssss");
+        console.log(building1);
+        console.log(building2);
+    </script>
+    <!--Applying modifications on object-->
+    <script>
+        let Employee = {
+            EmployeeID: 10871,
+            EmployeeName: "sai"
+        }
+        console.log(Employee);
+        /*Adding Data*/
+        Employee.EmployeeSalary = 98000;
+        console.log(Employee);
+        /* Changing data*/
+        Employee.EmployeeName = "prasanna";
+        console.log(Employee);
+        /*Removing Data*/
+        delete Employee.EmployeeID;
+        console.log(Employee);
+        Employee.EmployeeName = "Sai Prasanna";
+        console.log(Employee);
+        /*Value should be fixed for object then we will use object.freeze() method*/
+        Object.freeze(Employee);
+        Employee.EmployeeName = "B Sai Prasanna";
+        console.log(Employee);
+    </script>
+    <!--Only read keys information from object-->
+    <script>
+        let KeyObject = {
+            KeyID: 10,
+            KeyName: "Keys"
+        }
+        console.log(Object.keys(KeyObject));
+
+        //By using for in we can acheive key
+        for (let keyinfo in KeyObject) {
+            console.log(keyinfo);
+        }
+
+        //Read values from object
+        console.log(Object.values(KeyObject));
+
+        for (let keyValue in KeyObject) {
+            console.log(KeyObject[keyValue]);
+        }
+    </script>
+    <!--Object.Create()-->
+    <script>
+        let createParentObj = {
+            create1: 100,
+            create2: 200,
+            create3: 300
+        }
+        let createChildObj = Object.create(createParentObj);
+        console.log(createChildObj);
+        createChildObj.create4 = 400,
+            console.log(createChildObj);
+        console.log(createParentObj);
+    </script>
+    <script>
+        let parentObj = {
+            house1: function House1() {
+                console.log("h1");
+            },
+            house2: function House2() {
+                console.log("h2");
+            },
+        };
+        let childObj = Object.create(parentObj);
+        childObj.house3 = function House3() {
+            console.log("h3");
+        }
+        console.log(childObj);
+        console.log(childObj.house3);
+        for (let keyChildobj in childObj) {
+            console.log(keyChildobj);
+        }
+        for (let keyParentobj in parentObj) {
+            console.log(keyParentobj);
+        }
+        console.log(childObj);
+    </script>
+    <script>
+        let parentObj1 = {
+            parent1: 1,
+            parent2: 2
+        }
+        let childObj1 = Object.create(parentObj1);
+        console.log(parentObj1);
+        console.log(childObj1);
+        childObj1.parent2 = 3;
+        console.log(childObj1);
+    </script>
+    <!--Object.Assign()-->
+    <script>
+        let targetObj = {
+            target1: 1,
+            target2: 2
+        }
+        let sourceObj = {
+            target2: 3,
+            source1: 4,
+            source2: 5
+        }
+        let targetSouceobj = Object.assign(targetObj, sourceObj);
+        console.log(targetObj);
+        console.log(sourceObj);
+        console.log(targetSouceobj);
+    </script>
+    <script>
+        class PersonClass {
+            constructor(personID, PersonName) {
+                this.personID = personID;
+                this.PersonName = PersonName;
+            }
+        }
+        let person1 = new PersonClass(1, "sai");
+        console.log(person1);
+        let person2 = new PersonClass(2, "Prasanna");
+        console.log(person2);
+    </script>
+    <script>
+        let functionObject = {
+            functionID: 10871,
+            functionName: "sai",
+
+            displayfunctionObj: function () {
+                console.log(this.functionID + " " + this.functionName);
+            }
+        }
+        functionObject.displayfunctionObj();
+    </script>
+
+    <!--Functions-->
+    <script>
+        /*Named Functions with no parameters*/
+        function functionNoParam() {
+            console.log("No Parameter Function");
+        }
+        functionNoParam();
+
+        function AddOperatingbyFuction() {
+            let fun1 = 10;
+            let fun2 = 20;
+            console.log(fun1 + fun2);
+        }
+        AddOperatingbyFuction();
+        AddOperatingbyFuction();
+        AddOperatingbyFuction();
+
+        /******************************************************************/
+
+        /*Named Functions with parameters*/
+        function AddOperationbyFuction(fun1, fun2) {
+            console.log(fun1 + fun2);
+        }
+        AddOperationbyFuction(10, 20);
+        AddOperationbyFuction(30, 40);
+        AddOperationbyFuction(50, 60);
+
+        /******************************************************************/
+
+        /*Named Functions with Rest parameters*/
+        function AddRestParam(...numsValue) {
+            for (let addrest of numsValue) {
+                console.log(addrest);
+            }
+        }
+        AddRestParam(10, 20, 30);
+        AddRestParam(30, 40);
+        AddRestParam(50, 60);
+
+        function AddRestParam1(...numsValue1) {
+            let addSum = 0;
+            for (let addrest1 of numsValue1) {
+                addSum = addSum + addrest1;
+            }
+            console.log(addSum);
+        }
+        AddRestParam1(10, 20);
+        AddRestParam1(30, 40);
+        AddRestParam1(50, 60);
+
+        /******************************************************************/
+
+        /*Named Functions with Default parameters*/
+
+        function defaultParam(def1 = 10, def2 = 20) {
+            console.log(def1 + def2);
+        }
+        defaultParam();
+        defaultParam(100);//120
+        defaultParam(100, 200);//300
+        defaultParam(100, 200, 300);//300
+
+        /******************************************************************/
+
+        /*Named Functions Return parameters*/
+        console.log("Return");
+
+        function returnFun(re1, re2) {
+            let returnSum = re1 + re2;
+            return returnSum;
+        }
+        let returnFun1 = returnFun(10, 20);
+        console.log(returnFun1);
+        console.log(returnFun(10, 10));
+
+        function returnFun2(re13) {
+            return re13;
+        }
+        let returnFun3 = returnFun2("hello");
+        console.log(returnFun3);
+        returnFun3 = returnFun2(11);
+        console.log(returnFun3);
+
+
+        function returnFun4(ret4) {
+            console.log("hi");
+            return ret4;
+            console.log("hi"); //Not possible after return type
+        }
+        returnFun4();
+
+        /******************************************************************/
+
+        /* anonymus Function*/
+        let Annonymous = function () {
+            let annon1 = 100;
+            let annon2 = 200;
+            console.log(annon1 + annon2);
+        }
+        Annonymous();
+
+        //Using Param
+        let Annonymous1 = function (annon3, annon4) {
+            console.log(annon3 + annon4);
+        }
+        Annonymous1(10, 20);
+
+        //Using return type
+        let Annonymous2 = function (annon5, annon6) {
+            let annonSum = annon5 + annon6;
+            return annonSum;
+        }
+        console.log(Annonymous2(300, 300));
+
+        //Using rest
+        let restAnnoyn = function (...restnums) {
+            let restAnnonSum = 0;
+            for (let restannon of restnums) {
+                restAnnonSum = restAnnonSum + restannon;
+            }
+            return restAnnonSum;
+        }
+        console.log(restAnnoyn(1, 2, 3, 4, 5, 6));
+
+        /******************************************************************/
+
+        /* Arrow Function: Short form of Annonymous function*/
+        console.log("Arrow Function");
+
+        let arrowFunction = () => { console.log("Arrow"); };
+        arrowFunction();
+
+        /*With Parameters*/
+        let arrowFunction1 = (arrow1, arrow2) => {
+            console.log(arrow1 + arrow2);
+        };
+        arrowFunction1(10, 20);
+
+        /*Arrow with even or odd program*/
+        let arrowEven = (even) => {
+            if (even % 2 == 0) {
+                console.log("Even Number");
+            } else {
+                console.log("Odd Number");
+            }
+        }
+        arrowEven(10);
+        arrowEven(11);
+
+        /* Arrow with Rest & return*/
+        let arrowRest = (...arrownums) => {
+            let arrowSum = 0;
+            for (let arrow of arrownums) {
+                arrowSum = arrowSum + arrow;
+            };
+            /*console.log(arrowSum);*/
+            return arrowSum;
+        }
+        console.log(arrowRest(1, 2, 3));
+
+        /******************************************************************/
+
+        /* IIFE Functions: Immediate Invoke function Expression*/
+        console.log("IIFE Function");
+
+        (function () {
+            console.log("sai");
+        })();
+
+        /*IIFE With Parameters*/
+        (function (iifefun1, iifefun2) {
+            console.log(iifefun1 + iifefun2);
+        })(100, 200);
+
+        /*IIFE With Rest parameters*/
+        (function (...iifenums) {
+            let iifesum = 0;
+            for (let iife of iifenums) {
+                iifesum = iifesum + iife;
+            }
+            console.log(iifesum);
+        })(1, 2, 3);
+    </script>
+
+    <!--/******************************************************************/-->
+    <!--Arrays-->
+    <!--/*Array Length()*/-->
+    <script>
+
+        let array1 = [1, 2, 3, 4];
+        console.log(typeof array1);
+        console.log(array1.length);
+        array1.length = 10;
+        console.log(array1.length);
+
+        for (let array2 = 0; array2 < array1.length; array2++) {
+            console.log(array1[array2]);
+        }
+
+        for (let array3 of array1) {
+            console.log(array3);
+        }
+
+        array1.length = 3;
+        console.log(array1.length);
+    </script>
+
+    <!--syntax:2-->
+    <script>
+        let array4 = new Array(10, 20, 30, 40);
+        console.log(array4.length);
+        console.log(array4);
+    </script>
+
+    <!--syntax:3-->
+    <script>
+        let array5 = new Array();
+        array5[0] = 100;
+        array5[1] = 200;
+        console.log(array5.length);
+        console.log(array5);
+        for (let array6 of array5) {
+            console.log(array6);
+        }
+    </script>
+
+    <!--Array Push() & Pop()-->
+    <script>
+        let arrayPush = new Array(10, 20, 30);
+        //or
+        //let arrayPush = [10, 20, 30];
+        console.log(arrayPush.length);
+
+        for (let arraypushall of arrayPush) {
+            console.log(arraypushall);
+        }
+
+        /* add the value*/
+        arrayPush.push(40);
+        console.log(arrayPush.length);
+
+        for (let arraypushall1 of arrayPush) {
+            console.log(arraypushall1);
+        }
+
+        /*add multiple Values*/
+        arrayPush.push(1, 2, 3);
+        console.log(arrayPush.length);
+
+
+        for (let arraypushall12 of arrayPush) {
+            console.log(arraypushall12);
+        }
+
+        /* Pop*/
+        arrayPush.pop();
+        arrayPush.pop();
+        arrayPush.pop();
+        arrayPush.pop();
+        console.log(arrayPush.length);
+
+        for (let arraypushall123 of arrayPush) {
+            console.log(arraypushall123);
+        }
+    </script>
+
+    <!--Unshift() & Shift()-->
+    <script>
+        let unshiftFunction = [1, 23, 4, 5];
+        for (let unshift of unshiftFunction) {
+            console.log(unshift);
+        }
+        unshiftFunction.unshift(6);
+        for (let unshift1 of unshiftFunction) {
+            console.log(unshift1);
+        }
+        unshiftFunction.unshift(10, 20, 30);
+        for (let unshift2 of unshiftFunction) {
+            console.log(unshift2);
+        }
+
+        console.log("Shift");
+        unshiftFunction.shift();
+        unshiftFunction.shift();
+        for (let unshift3 of unshiftFunction) {
+            console.log(unshift3);
+        }
+        console.log(unshiftFunction.length);
+    </script>
+
+    <!--IndexOf(): read selected value first index & LastIndexOf():read selected value last index-->
+    <script>
+        console.log("IndexOf");
+        let indexofFun = [10, 20, 30, 30];
+        console.log(indexofFun.indexOf(20));
+        console.log(indexofFun.indexOf(30));
+        console.log(indexofFun.indexOf(40));
+
+        console.log("LastIndexOf");
+        console.log(indexofFun.lastIndexOf(30));
+    </script>
+
+    <!--Find() & Findindex()-->
+    <script>
+        let findFun = [1, 2, 3, 4, 5, 6, 7, 8];
+        function findEven(evenNum) {
+            return (evenNum % 2 == 0);
+        }
+        console.log(findFun.find(findEven));
+        console.log(findFun.find(findEven1 => findEven1%2==0));
+        console.log(findFun.find(findEven1 => findEven1 % 2 != 0));
+
+        console.log("FindIndex");
+        console.log(findFun.findIndex(findEven));
+        console.log(findFun.findIndex(findEven1 => findEven1==6));
+        console.log(findFun.findIndex(findEven1 => findEven1%2!=0));
+    </script>
+
+    <!--sort() & reverse()-->
+    <script>
+        let sortfun = ["sai", "Prasanna", "Bandi"];
+        for (let sort of sortfun) {
+            console.log(sort);
+        }
+        sortfun.sort();
+        for (let sort of sortfun) {
+            console.log(sort);
+        }
+        console.log("reverse");
+        let reversefun = ["sai", "Prasanna", "Bandi"];
+        reversefun.reverse();
+        for (let rev of reversefun) {
+            console.log(rev);
+        }
+    </script>
+
+    <!--Interview Questions-->
+    <script>
+        let in1 = [];
+        let in2 = [];
+        console.log(in1 == in2);
+        let in3 = in1;
+        console.log(in3 == in1);
+        let in4 = [] + [];
+        console.log(in4); /*Empty String*/
+        console.log(typeof in4);
+    </script>
+
+    <!--Foreach()-->
+    <script>
+        let foreachFun = [10, 20, 20, 30, 40, 20];
+        foreachFun.forEach(function (foreachVariable) {
+            console.log(foreachVariable);
+        })
+
+        let foreachfun1 = ["sai", "Prasanna"];
+        foreachfun1.forEach(function (foreachVariable1) {
+            console.log(foreachVariable1);
+        })
+    </script>
+
+    <!--map()-->
+    <script>
+        let mapFun = [1, 2, 3, 4, 5];
+        let mapfun1 = mapFun.map(mapVariable => mapVariable * mapVariable);
+        for (let map of mapfun1) {
+            console.log(map);
+        }
+
+        let cubemap = mapFun.map(mapVariable => mapVariable * mapVariable * mapVariable);
+        for (let map1 of cubemap) {
+            console.log(map1);
+        }
+    </script>
+
+    <!--Filter()-->
+    <script>
+        let filterFun = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        let filterEvenNum = filterFun.filter(filterVariable => filterVariable % 2 == 0);
+        for (let filter of filterEvenNum) {
+            console.log(filter);
+        }
+
+        function FilterevenFun(evennum) {
+            return evennum % 2 == 0;
+        }
+        let evennums1 = filterFun.filter(FilterevenFun);
+        for (let even1 of evennums1) {
+            console.log(even1);
+        }
+
+        /*read greater than 5 values*/
+        function Isgreater(great) {
+            return great >= 5;
+        }
+        let greater = filterFun.filter(Isgreater);
+        for (let great1 of greater) {
+            console.log(great1);
+        }
+
+       /* less than five*/
+
+        let lesser = filterFun.filter(less => less < 5);
+        for (let lessVar of lesser) {
+            console.log(lessVar);
+        }
+    </script>
+
+    <!--Fill() Function-->
+    <script>
+        let fillFun = [1, 2, 3, 4, 5];
+        for (let fillFun1 of fillFun) {
+            console.log(fillFun1);
+        }
+        let fill9 = fillFun.fill(9);
+        for (fillvalue of fill9) {
+            console.log(fillvalue);
+        }
+        console.log("fill 8 on selected values");
+        let fill8 = fillFun.fill(8, 2);
+        for (fillvalue1 of fill8) {
+            console.log(fillvalue1);
+        }
+    </script>
+
+    <!--Concat()-->
+    <script>
+        let concatFun1 = [1, 2, 3];
+        let concatFun2 = [3, 4, 5];
+        let concatFun3 = concatFun1.concat(concatFun2);
+        console.log(concatFun3.length);
+        for (concatAll of concatFun3) {
+            console.log(concatAll);
+        }
+        let concatFun4 = concatFun1 + concatFun2;
+        for (let concatall1 of concatFun4) {
+            console.log(concatall1);
+        }
+        console.log(concatFun4.length);
+    </script>
+
+    <!--MultiDimensional Array-->
+    <script>
+        let multiArray = new Array(new Array(10, 20, 20), new Array(10, 20, 30), new Array(40, 20, 20), 100, 200);
+        console.log(multiArray.length);
+        console.log(multiArray[0]);
+        console.log(multiArray[0].length);
+        console.log(multiArray[0][0]);
+        multiArray[1].forEach(function (arrayValue) {
+            console.log(arrayValue);
+        })
+        for (let array1 = 0; array1 < multiArray[1].length; array1++) {
+            console.log(multiArray[1][array1]);
+        }
+        for (let array1 = 0; array1 < multiArray.length; array1++) {
+            console.log(multiArray[array1]);
+        }
+
+        let multiarray1 = new Array(new Array(10, 20, new Array(11, 12, new Array(20, 30))));
+    </script>
+
+    <!--Set-->
+    <script>
+        let set1 = new Set();
+        set1.add(10);
+        set1.add(10);
+        set1.add(20);
+        set1.add(20);
+        set1.add(30);
+        console.log(set1.size);
+        console.log(set1[0]);
+        console.log(set1.has(10));
+        console.log(set1);
+
+        for (let set2 of set1) {
+            console.log(set2);
+        }
+        set1.forEach(function (setvalue) {
+            console.log(setvalue);
+        })
+        set1.forEach(function (setValue1, setKey) {
+            console.log(setKey + "  " + setValue1);
+        })
+
+        /*Multiple Values*/ 
+        let setMultiple = [1, 2, 3, 4,4];
+        let setMultiple1 = new Set(setMultiple);
+        console.log(setMultiple1.size);
+        console.log(setMultiple1);
+
+        let setMultiple2 = new Set([10,20,20,30,40,50,60]);
+        console.log(setMultiple2.size);
+        console.log(setMultiple2);
+
+        for (let setMultiple3 of setMultiple2) {
+            console.log(setMultiple3);
+        }
+
+        setMultiple2.delete(10);
+        setMultiple2.delete(2);
+        console.log(setMultiple2);
+
+        //setMultiple2.clear(); it will clear entire array
+        //console.log(setMultiple2);
+
+        let readValue = setMultiple2.values();
+        console.log(readValue.next().value);
+        console.log(readValue.next().value);
+
+        let readKeys = setMultiple2.values();
+        console.log(readKeys);
+    </script>
+    
+    <!--Map-->
+    <script>
+        let map1 = new Map();
+        map1.set(1, "Biryani");
+        map1.set(2, "Chicken65");
+        map1.set(3, "ChickenTikka");
+        console.log(map1.size);
+        console.log(map1.get(1));
+        for (let map2 of map1.keys()) {
+            console.log(map2)
+        }
+        for (let map3 of map1.values()) {
+            console.log(map3)
+        }
+        map1.forEach(function (mapValues, mapKeys) {
+            console.log(mapKeys +" " +mapValues);
+        })
+        console.log(map1);
+        map1.set("four", "chicken");
+        map1.set("seven", 7);
+        console.log(map1.size);
+        console.log(map1.get("four"));
+    </script>
+
+    <!--Date Object-->
+    <script>
+        let date1 = new Date();
+        console.log(date1);
+        console.log(date1.getDate());
+        console.log(date1.getDay());
+        console.log(date1.getMonth());
+        console.log(date1.getFullYear());
+        let dateMonth = ["jan", "Feb", "March", "April", "May", "June", "July"];
+        console.log(dateMonth[date1.getMonth()]);
+        console.log(date1.getHours());
+        console.log(date1.getMinutes());
+        console.log(date1.getSeconds());
+        console.log(date1.getMilliseconds());
+
+        date1.setHours(12);
+        console.log(date1.getHours());
+        date1.setMonth(9);
+        console.log(date1.getMonth());
+        date1.setFullYear(2025);
+        console.log(date1.getFullYear());
+        date1.setDate(3);
+        console.log(date1.getDate());
+
+        let date3 = new Date(2025, 11, 11);
+        console.log(date3);
+    </script>
+
+    <!--RegularExpression-->
+    <script>
+        let regStringTest = /hello/;
+        console.log(regStringTest.test('hello'));
+        console.log(regStringTest.test('Hello'));
+        console.log(regStringTest.test('hello world'));
+        console.log(regStringTest.test('Welcome'));
+
+        let regStringTest1 = /hello/i;
+        console.log(regStringTest1.test('hello'));
+        console.log(regStringTest1.test('Hello'));
+        console.log(regStringTest1.test('HelLo'));
+
+        let regStringTest2 = /s/;
+        console.log(regStringTest2.test('sai'));
+        console.log(regStringTest2.test('prasanna'));
+        console.log(regStringTest2.test('bp'));
+        console.log(regStringTest2.test('Sai'));
+
+        let regStringTest3 = /s/i;
+        console.log(regStringTest3.test('Sai'));
+        console.log(regStringTest3.test('Sai'));
+        console.log(regStringTest3.test("Sai"));
+
+        /*Second Syntax*/
+        let regStringTest4 = new RegExp(/s/);
+        console.log(regStringTest4.test('sai'));
+        console.log(regStringTest4.test('Sai'));
+
+        let regStringTest5 = new RegExp(/s/i);
+        console.log(regStringTest5.test('sai'));
+        console.log(regStringTest5.test('Sai'));
+
+        console.log(/s/.test('sai'));
+        console.log(/s/i.test('Sai'));
+
+        //Name Starts with S character or not
+        let regStringTest6 = new RegExp(/^s/);
+        console.log(regStringTest6.test('sai'));
+        console.log(regStringTest6.test('Sai'));
+        console.log(regStringTest6.test('Prasanna'));
+
+        //Name Ends with S character or not
+        let regStringTest7 = new RegExp(/s$/);
+        console.log(regStringTest7.test('sai'));
+        console.log(regStringTest7.test('ss'));
+        console.log(regStringTest7.test('SS'));
+
+        //Name Ends and Starts with S character or not
+        let regStringTest8 = new RegExp(/^[s]+$/);
+        console.log(regStringTest8.test('ss'));
+        console.log(regStringTest8.test('SS'));
+        console.log(regStringTest8.test('james'));
+
+        //Not working-Windows 11 working
+        let regStringTest9 = new RegExp(/^s.+s$/);
+        console.log(regStringTest9.test('ss'));
+        console.log(regStringTest9.test('SS'));
+        console.log(regStringTest9.test('james'));
+
+        /*Name having small a-z characters or not */
+        let regStringTest10 = new RegExp(/[a-z]/);
+        console.log(regStringTest10.test('ss'));
+        console.log(regStringTest10.test('SS'));
+        console.log(regStringTest10.test('james'));
+
+        /*Check name having chars and Numbers or not*/
+        let regStringTest11 = /[a-z][A-Z][0-9]/;
+        console.log(regStringTest11.test('ss123'));
+        console.log(regStringTest11.test('SS123'));
+        console.log(regStringTest11.test('james'));
+
+        let regStringTest12 = /[0-9]/;
+        console.log(regStringTest12.test('ss123'));
+        console.log(regStringTest12.test('SS123'));
+        console.log(regStringTest12.test('1234'));
+
+        let regStringTest13 = /\w/;
+        console.log(regStringTest13.test('ss123'));
+        let regStringTest14 = /\W/;
+        console.log(regStringTest14.test('ss123'));
+        console.log(regStringTest14.test('#####'));
+
+        let regStringTest15 = /\D/;
+        console.log(regStringTest15.test('123'));
+        console.log(regStringTest15.test('abc'));
+    </script>
+</body>
+</html>

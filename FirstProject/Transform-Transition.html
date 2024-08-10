@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   <style>
+       body{
+           background-color:palevioletred;
+       }
+
+       #image {
+           border: 5px solid red;
+           width: 400px;
+           height: 300px;
+           margin: 160px auto;
+           display: block;
+           border-radius: 20px;
+           filter: grayscale(100%);
+       }
+       #image:hover {
+           transform: scale(2,2);
+           filter: grayscale(0%);
+       }
+
+       #img1 {
+           border: 5px solid red;
+           width: 400px;
+           height: 300px;
+           margin: 160px auto;
+           border-radius: 20px;
+           position:relative;
+           overflow:hidden;
+       }
+       #img1 img {
+            width: inherit;
+            height: inherit;
+            border-radius: 20px;
+       }
+       #img1 #paragraph{
+           position:absolute;
+           top:0;
+           color:white;
+           width:50%;
+           height:100%;
+           padding:10px;
+           transform:perspective(500px) rotateY(90deg);
+           transform-origin:right;
+           transition:all 0.5s;
+           border:2px solid white;
+           border-top-right-radius:10px;
+           border-bottom-right-radius:20px;
+           box-sizing:border-box;
+       }
+       #paragraph {
+           text-align: justify;
+       }
+       #img1:hover #paragraph {
+           transform: perspective(500px) rotateY(0deg);
+       }
+
+       #img2 {
+           border: 5px solid red;
+           width: 500px;
+           height: 400px;
+           margin: auto;
+           border-radius:10px;
+           position:relative;
+           overflow:hidden;
+       }
+       #img2 img {
+               width: 100%;
+               height: 100%;
+               border-radius: 10px;
+       }
+       #img2 #paragraph1{
+           position:absolute;
+           top:-100%;
+           left:0;
+           padding:20px;
+           box-sizing:border-box;
+           width:100%;
+           height:100%;
+           transition:all 0.5s;
+       }
+       #img2:hover #paragraph1{
+           top:0;
+       }
+
+       #img3 {
+           border: 5px solid red;
+           width: 500px;
+           height: 400px;
+           margin: auto;
+           border-radius: 10px;
+           position: relative;
+       }
+       #img3 img {
+               width: inherit;
+               height: inherit;
+               border-radius: 10px;
+               transition: all 0.5s;
+       }
+       #img3:hover img{
+            transform:scale(0);
+       }
+       #img3 #paragraph2 {
+               position: absolute;
+               top: 0;
+               left: 0;
+               padding: 20px;
+               width:inherit;
+               height: inherit;
+               box-sizing: border-box;
+               text-align: justify;
+               transform:scale(0) rotate(180deg);
+               transition:all 0.5s;
+               background-color:blue;
+               color:white;
+       }
+       #img3:hover #paragraph2 {
+               transform: scale(1) rotate(0deg);
+       }
+   </style>
+</head>
+<body>
+    <img id="image" src="Images Folder/god.jpg" />
+
+    <h4>Displaying text on image: by using rotate</h4>
+    <div id="img1">
+        <img src="Images Folder/god.jpg" />
+        <p id="paragraph">
+            Another way to center an image is by using the margin: auto property (for left-margin and right-margin).However, using margin: auto alone will not work for images.
+            If you need to use margin: auto, there are 2 additional properties you must use as well.The margin-auto property does not have any effects on inline-level elements.
+            Since the img tag is an inline element, we need to convert it to a block-level element first
+        </p>
+    </div>
+
+    <!--Displaying text from top to bottom-->
+    <div id="img2">
+        <img src="Images Folder/Mixed-Color.jpg" />
+        <p id="paragraph1">
+            Another way to center an image is by using the margin: auto property (for left-margin and right-margin).However, using margin: auto alone will not work for images.
+            If you need to use margin: auto, there are 2 additional properties you must use as well.The margin-auto property does not have any effects on inline-level elements.
+            Since the img tag is an inline element, we need to convert it to a block-level element first
+        </p>
+    </div>
+    <br /><br />
+
+    <!--Rotating the image-->
+    <div id="img3">
+        <img src="Images Folder/Mixed-Color.jpg" />
+        <p id="paragraph2">
+            Another way to center an image is by using the margin: auto property (for left-margin and right-margin).However, using margin: auto alone will not work for images.
+            If you need to use margin: auto, there are 2 additional properties you must use as well.The margin-auto property does not have any effects on inline-level elements.
+            Since the img tag is an inline element, we need to convert it to a block-level element first
+        </p>
+    </div>
+</body>
+</html>

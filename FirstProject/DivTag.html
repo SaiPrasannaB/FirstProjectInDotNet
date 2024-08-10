@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyper Text Markup Language</title>
+    <style>
+        div {
+            width: 500px;
+            display: inline-block;
+            margin: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px black;
+        }
+
+        ol {
+            background-color: lightgray;
+            font-family: cursive;
+            margin: 20px;
+        }
+
+        li {
+            background-color: darkgrey;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        ul {
+            background-color: lightgreen;
+            margin: 50px;
+        }
+        table{
+            width:50%;
+            margin:20px;
+            background-color:burlywood;
+            color:darkviolet;
+            text-align:center;
+            border-color:red;
+        }
+        thead{
+            background-color:aquamarine;
+        }
+        tbody{
+            background-color:cadetblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Div Tag</h1>
+    <div style="background-color:lightgreen">
+        <h1>Division Tag(div)</h1>
+        <p>
+            The "div" tag defines a division or a section in an HTML document.
+            The "div" tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.
+            The "div" tag is easily styled by using the class or id attribute.
+            Any sort of content can be put inside the "div"tag!
+            Note: By default, browsers always place a line break before and after the "div" element.
+        </p>
+    </div>
+    <div style="background-color:lightblue">
+        <h1>Division Tag(div)</h1>
+        <p>
+            The "div" tag defines a division or a section in an HTML document.
+            <span style="background-color:red;">The "div" tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.</span>
+            The "div" tag is easily styled by using the class or id attribute.
+             Any sort of content can be put inside the "div"tag!
+            Note: By default, browsers always place a line break before and after the "div" element.
+        </p>
+    </div>
+    <br />
+
+    <h1>Span Tag:</h1>
+    <h1>
+        <span style="color:green">S</span>
+        <span style="color:red">p</span>
+        <span style="color:blue">a</span>
+        <span style="color:purple">n</span>
+    </h1>
+
+    <h1>Text Formatting Tags:</h1>
+    <br />
+    <b>Bold Tag</b><br />
+    <strong>Strong-Bold Tag</strong><br />
+    <i>Italic Formatting Text</i><br />
+    <em>Emphais-italic formating text</em><br />
+    <u>Underlie With Text</u><br />
+    <s>Strike Formatting Text</s><br />
+    <del>delete-strike formatting text</del><br />
+    10 power<sup>2</sup><br />
+    log<sub>10</sub><br />
+    <mark>Mark tag will apply backgroubd color yellow</mark><br />
+    <q>Q tag will give double quotes to the text</q><br />
+    <pre>
+      pre
+          Formatting
+                     Text
+    </pre><br />
+    <address>
+        Name, place, Mobile number
+    </address><br />
+    <code>Keybord/Computer Code</code>
+
+    <h1>List Tags</h1>
+    <!--by default numeric-->
+    <ol>
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ol>
+    <!--to get character-->
+    <ol type="A">
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ol>
+    <!--Roman Numbers-->
+    <ol type="I">
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ol>
+    <!--by default desc-->
+    <ul type="disc">
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ul>
+    <!--circle-->
+    <ul type="circle">
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ul>
+    <!--Square-->
+    <ul type="square">
+        <li>Order List</li>
+        <li>UnOrder List</li>
+    </ul>
+
+    <h1>Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Fee</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Prasanna</td>
+                <td>15000</td>
+                <td>Dot Net</td>
+            </tr>
+            <tr>
+                <td>Sai</td>
+                <td>15000</td>
+                <td>Dot Net</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="HtmlBasics.html">Anchor Tag</a>
+</body>
+</html>

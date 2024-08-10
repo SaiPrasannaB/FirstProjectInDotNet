@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <style>
+        h1 {
+            border: 10px double red;
+            text-align: center;
+        }
+
+        h2 {
+            border-top: 10px solid red;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h3 {
+            border: 10px solid red;
+            text-align: center;
+            padding: 10px;
+            border-radius: 30%;
+        }
+
+        #border-radius {
+            border: 10px solid red;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        #border-radius2 {
+            border-left: 10px solid red;
+            border-right: 10px solid blue;
+            border-top: 10px solid green;
+            border-bottom: 10px solid yellow;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        h4 {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+        }
+
+        #position1 {
+            background-color: blue;
+            position: static;
+            left: 200px;
+        }
+
+        #position2 {
+            background-color: aqua;
+            /*position: relative;*/
+            left: 200px;
+            /*top:200px;*/
+        }
+
+        #position3 {
+            background-color: rgba(0,0,0,0.5);
+            width: 300px;
+            height: 200px;
+            position: absolute;
+        }
+
+        #position4 {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+            position: absolute;
+            left: 10px;
+        }
+
+        #position5 {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 150px;
+        }
+
+        #position6 {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: fixed;
+            left: 800px;
+        }
+
+        #position7 {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h4 id="position7">Sticky Position</h4>
+    <div>
+        <h4 id="position6">Fixed Position</h4><br />
+    </div>
+    <h1>Prasanna</h1>
+    <h2>Prasanna</h2>
+    <h3>Border-radius</h3>
+    <h3 id="border-radius">Border-radius</h3>
+    <h3 id="border-radius2">Border-radius</h3>
+    <h4 id="position1"> static</h4>
+    <h4 id="position2">relative</h4>
+    <div id="position3">
+        <h4 id="position4">Child1</h4>
+        <h4 id="position5">Child2</h4>
+    </div>
+    <br />
+</body>
+</html>
